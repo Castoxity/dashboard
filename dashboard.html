@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+    <div class="Parent">
+        <div class="Left">
+            <div class="LeftTop">
+                <div class="ImageLogo">
+                    <img id="ImageLogo" src="/images/s2t.png">
+                </div>
+                <div class="Subtitle-1"></div>
+            </div>
+            <div class="LeftDetails">
+                <div class="Dashboard">
+                    <button id="Dashboard">Dashboard</button>
+                </div>
+                <div class="Profile">
+                    <button id="Profile">Profile</button>
+                </div>
+                <div class="LogBook">
+                    <button id="LogBook">Log Books</button>
+                </div>
+                <div class="Marksheet">
+                    <button id="Marksheet">Marksheet</button>
+                </div>
+                <div class="Certificate">
+                    <button id="Certificate">Certificate</button>
+                </div>
+            </div>
+        </div>
+        <div class="Right">
+            <div class="RightTop">
+                <div class="TopLeft">Dashboard</div>
+                <div class="TopRight">
+                     <div class="ImageUser"></div>
+                       <div class="User">
+                           <div class="UserName">
+                             <span id="Name">Ram Adhikari</span>
+                           </div>
+                            <div class="UserRole">
+                              <span id="Role">Student</span>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div id="ProfileScreen" style="display:none;">
+                <span>This is profile page</span>
+            </div>
+            <div id="WeeklyLogPage" style="display:none;">
+                <span>This is Weekly logbook page</span>
+            </div>
+            <div id="LogBookPage" style="display:none;">
+                <span>This is LogBook page</span>
+            </div>
+            <div id="MarksheetPage" style="display:none;">
+                <span>This is Marksheet page</span>
+            </div>
+            <div id="CertificatePage" style="display:none;">
+                <span>This is Certificate page</span>
+            </div>
+            <div id="RightContent">
+               
+                  <div class="RightHeading">
+                      <h2 id="RightHeading">Explore</h2>
+                    </div>
+                    <div class="RightOptions">
+                        <div class="RightProfile">
+                           <button type="button" id="RightProfile"> <icon>Profile</button>
+                       </div>
+                      <div class="RightWeeklyLog">
+                          <button type="button" id="RightWeeklyLog">Weekly Logbook</button>
+                      </div>
+                      <div class="RightLogbook">
+                         <button type="button" id="RightLogbook">Log Bookk</button>
+                     </div>
+                     <div class="RightMarksheet">
+                         <button type="button" id="RightMarksheet">Marksheet</button>
+                     </div>
+                     <div class="RightCertificate">
+                            <button type="button" id="RightCertificate">Certificate</button>
+                        </div>
+                  </div>
+               
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
