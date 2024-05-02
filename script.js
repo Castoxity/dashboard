@@ -30,6 +30,9 @@
 //     document.getElementById(check).style.display = 'none';
 //     document.getElementById('RightContent').style.display = 'block';
 // });
+var swap;
+swap = document.getElementById('RightContent').innerHTML;
+
 function loadPage(pageUrl) {
     fetch(pageUrl)
     .then(response => {
@@ -47,3 +50,8 @@ function loadPage(pageUrl) {
         console.error('There was a problem with the fetch operation:', error);
     });
 }
+
+
+document.getElementById('Dashboard').addEventListener('click', function() {
+    document.getElementById('RightContent').innerHTML = swap;
+});
