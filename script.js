@@ -42,8 +42,7 @@ function loadPage(pageUrl) {
         return response.text();
     })
     .then(data => {
-        // put an if statement here to check for dashboard
-        document.getElementById('testingcontent').style.display = 'none';
+
         document.getElementById('RightContent').innerHTML = data;
     })
     .catch(error => {
