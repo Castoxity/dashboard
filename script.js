@@ -50,7 +50,9 @@ function loadPage(pageUrl) {
     });
 }
 
-
 document.getElementById('Dashboard').addEventListener('click', function() {
     document.getElementById('RightContent').innerHTML = swap;
+    var change = document.getElementsById('Dashboard');
+    change.style.backgroundColor ="#ff0000"
+    change.style.color  = "#ffffff"
 });
