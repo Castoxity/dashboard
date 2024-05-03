@@ -1,0 +1,45 @@
+html,
+body{
+    padding:0;
+    margin:0;
+}
+.Parent{
+    display:flex;
+    flex-direction: column;
+}
+
+.First,
+.Second,
+.Third,
+.Fourth{
+    border: 1px solid red;
+}
+
+.First{
+    display:flex;
+    flex-direction: column;
+}
+.FirstTop{
+    padding-top:15px;
+    text-align: center;
+}
+
+.FirstInputs{
+    padding-top:20px;
+    display:flex;
+
+}
+
+.bruh-1,
+.bruh-2{
+    padding-bottom:10px;
+    position:relative;
+    left:7vw;
+}
+
+.bruh-3,
+.bruh-4{
+    padding-bottom:10px;
+    position: relative;
+    left:50vw;
+}

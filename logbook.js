@@ -8,7 +8,7 @@ function loadPage(pageUrl) {
     })
     .then(data => {
 
-        document.getElementById('RightContent').innerHTML = data;
+        document.getElementById('Main').innerHTML = data;
     })
     .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
