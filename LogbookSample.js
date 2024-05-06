@@ -1,44 +1,46 @@
-
 document.addEventListener("DOMContentLoaded", function() {
-    // all upload buttons get selected with this hellhole
-    const uploadButtons = document.querySelectorAll('.UploadButton');
+    const imageBoxes = document.querySelectorAll('.ImageBox');
+    const imageIds = []; // Array to store image IDs
+    let textBoxCreated = false; // Flag to track if text box is created
 
-    // loop through each upload button
-    uploadButtons.forEach(function(button, index) {
-        // get input element for this button
-        const input = button.querySelector('input[type="file"]');
+    imageBoxes.forEach((box, index) => {
+        const button = box.querySelector('.ImageButton');
+        const boxId = `ImageBox${index + 1}`; // Get the ID of the current box
 
-        // event listener for the button
         button.addEventListener('click', function() {
-            // trigger click event on the input element
-            input.click();
-        });
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = 'image/*';
+            input.style.display = 'none';
 
-        // add change event listener to the input element
-        input.addEventListener('change', function() {
-            // Cceck if a file is selected
-            if (input.files && input.files[0]) {
-                // create a FileReader object
-                const reader = new FileReader();
+            input.addEventListener('change', function() {
+                const file = input.files[0];
+                if (file) {
+                    const reader = new FileReader();
 
-                // set up the FileReader onload event
-                reader.onload = function(e) {
-                    // Create an image element
-                    const img = document.createElement('img');
-                    // set the image source to the uploaded file
-                    img.src = e.target.result;
-                    // set alt text for accessibility
-                    img.alt = "Uploaded Image";
+                    reader.onload = function(e) {
+                        box.style.backgroundImage = `url('${e.target.result}')`;
+                        imageIds[index] = boxId; // store the image ID in the array
+                        createTextBox(box); // create the text box if not already created
+                    };
 
-                    // Append the image to the corresponding container based on the button index
-                    const imageContainer = document.querySelector(`.Uploaded-Images${index + 1}`);
-                    imageContainer.appendChild(img);
-                };
+                    reader.readAsDataURL(file);
+                }
+            });
 
-                // read the uploaded file as a data URL
-                reader.readAsDataURL(input.files[0]);
-            }
+            document.body.appendChild(input); // Append input to the body
+            input.click(); // Trigger file input click event
+            document.body.removeChild(input); // Remove input after use
         });
     });
-});
 
+    function createTextBox(box) {
+        if (!textBoxCreated) { // Check if text box is not already created
+            const textBox = document.createElement('textarea');
+            textBox.placeholder = 'Enter text here...';
+            textBox.classList.add('ImageTextBox'); // Add a class for styling
+            box.appendChild(textBox); // Append the text box to the box element
+            textBoxCreated = true; // Set flag to true to indicate text box is created
+        }
+    }
+});

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Image Upload</title>
+    <link rel="stylesheet" href="hell hole.css">
+</head>
+<body>
+    <div class="parent">
+        <div class="InputImage">
+            <input type="file" id="InputImage" style="display:none;">
+            <button type="button" id="InputImg">Insert Image</button>
+        </div>
+        <div class="ShowImage">
+            <img id="UploadedImg" alt="Uploaded Image">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const inputImg = document.getElementById('InputImg');
+            const inputImage = document.getElementById('InputImage');
+            const uploadedImg = document.getElementById('UploadedImg');
+
+            inputImg.addEventListener('click', function() {
+                inputImage.click(); // Trigger file input click event
+            });
+
+            inputImage.addEventListener('change', function() {
+                const file = inputImage.files[0];
+                if (file) {
+                    const reader = new FileReader();
+
+                    reader.onload = function(e) {
+                        uploadedImg.src = e.target.result; // Set uploaded image source
+                    };
+
+                    reader.readAsDataURL(file); // Read file as data URL
+                }
+            });
+        });
+    </script>
+</body>
+</html>

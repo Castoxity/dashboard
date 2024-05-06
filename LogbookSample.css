@@ -1,119 +1,144 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 html,
-body{
-    padding:0;
-    margin:0;
-    font-family:Poppins;
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Poppins;
     background-color: #f0f2f5;
 }
-.Parent{
-    display:flex;
+
+.Parent {
+    display: flex;
     flex-direction: column;
 }
 
 .First,
 .Second,
 .Third,
-.Fourth{
-    border:none;
+.Fourth {
+    border: none;
 }
 
-.First{
+.First {
     box-shadow: 2px 2px 10px rgba(230, 226, 226, 0.3);
-    display:flex;
+    display: flex;
     flex-direction: column;
 }
-.FirstTop{
-    font-weight:500;
-    padding-top:20px;
+
+.FirstTop {
+    font-weight: 500;
+    padding-top: 20px;
     text-align: center;
 }
 
-.FirstInputs{
-    padding-top:100px;
-    padding-bottom:50px;
-    display:flex;
+.FirstInputs {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    display: flex;
 }
 
 .bruh-1,
-.bruh-2{
-    padding-bottom:10px;
-    position:relative;
-    left:7vw;
+.bruh-2 {
+    padding-bottom: 10px;
+    position: relative;
+    left: 7vw;
 }
 
 .bruh-3,
-.bruh-4{
-    padding-bottom:10px;
+.bruh-4 {
+    padding-bottom: 10px;
     position: relative;
-    left:50vw;
+    left: 50vw;
 }
-.Second{
-    margin-top:150px;
+
+.Second {
+    margin-top: 150px;
     box-shadow: 0px 0px 10px rgba(180, 179, 179, 0.3);
-    padding-top:100px;
-    display:flex;
+    padding-top: 100px;
+    display: flex;
     flex-direction: row;
 }
-#Todo{
-    width:40%;
+
+#Todo {
+    width: 40%;
 }
-.SecondRight{
-    position:relative;
+
+.SecondRight {
+    position: relative;
     /* left:-20%; */
-    padding-top:20px;
-}
-#Heading-2{
-    padding-left:30px;
+    padding-top: 20px;
 }
 
-#list{
+#Heading-2 {
+    padding-left: 30px;
+}
+
+#list {
     list-style-type: square;
-    margin-top:10px;
+    margin-top: 10px;
 }
 
-li{
-    padding-bottom:20px;
+li {
+    padding-bottom: 20px;
+}
+.ImageBoxes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow flex items to wrap to the next line */
 }
 
-.Third{
-    margin-top:10vh;
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-left:5%;
-    margin-right:5%;
-    height:90vh;
-}
-.FirstImage,
-.SecondImage,
-.ThirdImage,
-.FourthImage
-{
-width:50%;
+.ImageBox {
+    width: calc(50% - 20px); /* Set the width to 50% of the container minus some padding */
+    height: 400px; /* Adjust the height as needed */
+    margin: 10px; /* Add margin for spacing between boxes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
 }
 
-.Uploaded-Images
-{
-    width:100%;
-    background-color:red;
+.ImageButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
 }
 
-.Fourth{
-    padding-top:150px;
+.ImageButton:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.ImageTextBox {
+    background:transparent;
+    color:red;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    resize: vertical; /* Allow vertical resizing */
+    max-height: 100%; /* Set maximum height equal to the height of the box */
+}
+
+
+.Fourth {
+    padding-top: 150px;
     text-align: center;
-    width:100%;
+    width: 100%;
     height: 50vh;
 }
+
 #Hr1,
 #Hr2,
-#Hr3{
-    position:relative;
-    top:50px;
-    width:90%;
-    opacity:0.2;
+#Hr3 {
+    position: relative;
+    top: 50px;
+    width: 90%;
+    opacity: 0.2;
 }
-#ObservationInput{
+
+#ObservationInput {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
