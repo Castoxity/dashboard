@@ -14,6 +14,7 @@
                 <br>
                 <span id="Subtitle-1"><u>Sample for Food Production and Patisserie</u></span>
             </div>
+            <hr id="Hr1">
             <div class="FirstInputs">
                 <!-- add span inside the spans for user input -->
                 <div class="InputGaps-1">
@@ -29,21 +30,52 @@
                     <span id="Section">Section: <span id="Input-4">Kitchen</span></span></div>
                 </div>
             </div>
-        </div>
+        </div><hr id="Hr2">
         <div class="Second">
-            <div class="SecondInputs">
-                <!-- form and label here for the inputs, probably -->
-                <span>Second</span>
+            <div class="SecondLeft">
+                <img src="/images/todo-2.png " id="Todo">
+            </div>
+            <div class="SecondRight">
+                <div class="SecondInputs">
+                      <!-- form and label here for the inputs, probably -->
+                      <span id="Heading-2"><u>TASKS CARRIED OUT (To be filled by trainee/Handwritten):</u></span>
+                      <div class="Tasks">
+                       <ul id="list">
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                        </ul>
+
+                     </div>
+                </div>
             </div>
         </div>
+        <hr id="Hr3">
         <div class="Third">
             <!-- images go here -->
-            <span>Third</span>
+            <div class="Upload">
+                <div class="UploadButton">
+                    <input type="file" id="UploadPhoto" style="display: none;">
+                 <button type="button" class="UploadPhoto">Upload photo</button>
+                </div>
+            </div>
+            <div class="BoxForUpload">
+                <div class="Uploaded-Images">
+                </div>
+            </div>
+
         </div>
         <div class="Fourth">
             <!-- observation here -->
-            <span>fourth</span>
+            <div class="InnerFourth">
+            <span>Observation</span>
+            <div class="ObservationInput">
+                <textarea placeholder="Your observation description here" id="ObservationInput"></textarea>
+            </div></div>
         </div>
     </div>
+    <script src="LogbookSample.js"></script>
 </body>
 </html>
