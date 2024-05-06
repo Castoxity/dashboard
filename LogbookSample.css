@@ -80,21 +80,25 @@ li{
 .Third{
     margin-top:10vh;
     display:flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    margin-left:10%;
-    margin-right:10%;
+    margin-left:5%;
+    margin-right:5%;
+    height:90vh;
 }
-.Uploaded-Images {
-        display:flex;
-        flex-direction: row;
-        flex-wrap:wrap;
-        top: 12.4px;
-        left: 25.4px;
- } 
- .Uploaded-Image{
-    width:50%;
- }
+.FirstImage,
+.SecondImage,
+.ThirdImage,
+.FourthImage
+{
+width:50%;
+}
+
+.Uploaded-Images
+{
+    width:100%;
+    background-color:red;
+}
 
 .Fourth{
     padding-top:150px;
