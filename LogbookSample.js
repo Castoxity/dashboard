@@ -1,10 +1,12 @@
 document.addEventListener("DOMContentLoaded", function(){
     const imgBtn = document.querySelector(".InputImg");
     const imgInput = document.getElementById("InputImg");
+    const uploadedImagesContainer = document.querySelector(".Uploaded-Images"); // Get the container for uploaded images
 
     imgBtn.addEventListener("click", function(){
         imgInput.click();
     });
+
     imgInput.addEventListener("change", function(){
         HandleImageUpload(imgInput.files[0]);
     });
@@ -13,19 +15,28 @@ document.addEventListener("DOMContentLoaded", function(){
         if(file){
             const READER = new FileReader();
             READER.onload = function(e){
+                const imgDiv = document.createElement("div"); // Create a div to hold the image and text box
+                imgDiv.classList.add("image-container");
+
                 const img = document.createElement("img");
-                img.src= e.target.result;
+                img.src = e.target.result;
                 img.alt = "Uploaded Image";
                 img.classList.add("Uploaded-Image");
-                const uploadedImagesContainer = document.querySelector(".Uploaded-Images");
-                uploadedImagesContainer.appendChild(img);
 
+                const textBox = document.createElement("input"); // Create the text box
+                textBox.type = "text";
+                textBox.placeholder = "Enter description";
+
+                imgDiv.appendChild(img); // Append image and text box to the container div
+                imgDiv.appendChild(textBox);
+
+                uploadedImagesContainer.appendChild(imgDiv); // Append the container div to the Uploaded-Images container
             };
             READER.readAsDataURL(file);
         }
     }
-
 });
+
 
 // chatgpt method
 document.addEventListener("DOMContentLoaded", function() {
