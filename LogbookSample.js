@@ -1,39 +1,29 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const imageBoxes = document.querySelectorAll('.ImageBox');
+document.addEventListener("DOMContentLoaded", function(){
+    const imgBtn = document.querySelector(".InputImg");
+    const imgInput = document.getElementById("InputImg");
 
-    imageBoxes.forEach((box, index) => {
-        const button = box.querySelector('.ImageButton');
-
-        button.addEventListener('click', function() {
-            const input = document.createElement('input');
-            input.type = 'file';
-            input.accept = 'image/*';
-            input.style.display = 'none';
-
-            input.addEventListener('change', function() {
-                const file = input.files[0];
-                if (file) {
-                    const reader = new FileReader();
-
-                    reader.onload = function(e) {
-                        box.style.backgroundImage = `url('${e.target.result}')`;
-                        createTextBox(box); // Call function to create text box
-                    };
-
-                    reader.readAsDataURL(file);
-                }
-            });
-
-            document.body.appendChild(input);
-            input.click();
-            document.body.removeChild(input);
-        });
+    imgBtn.addEventListener("click", function(){
+        imgInput.click();
+    });
+    imgInput.addEventListener("change", function(){
+        HandleImageUpload(imgInput.files[0]);
     });
 
-    function createTextBox(box) {
-        const textBox = document.createElement('textarea');
-        textBox.placeholder = 'Enter text here...';
-        textBox.classList.add('ImageTextBox');
-        box.appendChild(textBox);
+    function HandleImageUpload(file){
+        if(file){
+            const READER = new FileReader();
+            READER.onload = function(e){
+                const img = document.createElement("img");
+                img.src= e.target.result;
+                img.alt = "Uploaded Image";
+                img.classList.add("Uploaded-Image");
+                const uploadedImagesContainer = document.querySelector(".Uploaded-Images");
+                uploadedImagesContainer.appendChild(img);
+
+            };
+            READER.readAsDataURL(file);
+        }
     }
+
 });
+
