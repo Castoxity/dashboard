@@ -1,11 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     const imageBoxes = document.querySelectorAll('.ImageBox');
-    const imageIds = []; // Array to store image IDs
-    let textBoxCreated = false; // Flag to track if text box is created
 
     imageBoxes.forEach((box, index) => {
         const button = box.querySelector('.ImageButton');
-        const boxId = `ImageBox${index + 1}`; // Get the ID of the current box
 
         button.addEventListener('click', function() {
             const input = document.createElement('input');
@@ -20,27 +17,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
                     reader.onload = function(e) {
                         box.style.backgroundImage = `url('${e.target.result}')`;
-                        imageIds[index] = boxId; // store the image ID in the array
-                        createTextBox(box); // create the text box if not already created
+                        createTextBox(box); // Call function to create text box
                     };
 
                     reader.readAsDataURL(file);
                 }
             });
 
-            document.body.appendChild(input); // Append input to the body
-            input.click(); // Trigger file input click event
-            document.body.removeChild(input); // Remove input after use
+            document.body.appendChild(input);
+            input.click();
+            document.body.removeChild(input);
         });
     });
 
     function createTextBox(box) {
-        if (!textBoxCreated) { // Check if text box is not already created
-            const textBox = document.createElement('textarea');
-            textBox.placeholder = 'Enter text here...';
-            textBox.classList.add('ImageTextBox'); // Add a class for styling
-            box.appendChild(textBox); // Append the text box to the box element
-            textBoxCreated = true; // Set flag to true to indicate text box is created
-        }
+        const textBox = document.createElement('textarea');
+        textBox.placeholder = 'Enter text here...';
+        textBox.classList.add('ImageTextBox');
+        box.appendChild(textBox);
     }
 });

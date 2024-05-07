@@ -85,13 +85,13 @@ li {
 .ImageBoxes {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap; /* Allow flex items to wrap to the next line */
+    flex-wrap: wrap; 
 }
 
 .ImageBox {
-    width: calc(50% - 20px); /* Set the width to 50% of the container minus some padding */
-    height: 400px; /* Adjust the height as needed */
-    margin: 10px; /* Add margin for spacing between boxes */
+    width: calc(50% - 20px);
+    height: 400px;
+    margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
