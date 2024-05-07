@@ -29,23 +29,61 @@ document.addEventListener("DOMContentLoaded", function(){
 
 // chatgpt method
 document.addEventListener("DOMContentLoaded", function() {
-    const inputField = document.getElementById('inputField');
-    const optionsContainer = document.getElementById('optionsContainer');
+    const inputField1 = document.getElementById('inputField1');
+    const optionsContainer1 = document.getElementById('optionsContainer1');
+    const inputField2 = document.getElementById('inputField2');
+    const optionsContainer2 = document.getElementById('optionsContainer2');
+    const optionsContainer3 = document.getElementById('optionsContainer3');
+    const inputField3 = document.getElementById('inputField3');
 
-    inputField.addEventListener('click', function() {
-        optionsContainer.style.display = 'block';
+    inputField1.addEventListener('click', function() {
+        optionsContainer1.style.display = 'block';
     });
 
     document.addEventListener('click', function(e) {
-        if (!optionsContainer.contains(e.target) && e.target !== inputField) {
-            optionsContainer.style.display = 'none';
+        if (!optionsContainer1.contains(e.target) && e.target !== inputField1) {
+            optionsContainer1.style.display = 'none';
         }
     });
 
-    optionsContainer.addEventListener('click', function(e) {
+    optionsContainer1.addEventListener('click', function(e) {
         if (e.target.classList.contains('option')) {
-            inputField.value = e.target.textContent;
-            optionsContainer.style.display = 'none';
+            inputField1.value = e.target.textContent;
+            optionsContainer1.style.display = 'none';
+        }
+    });
+
+    inputField2.addEventListener('click', function() {
+        optionsContainer2.style.display = 'block';
+    });
+
+    document.addEventListener('click', function(e) {
+        if (!optionsContainer2.contains(e.target) && e.target !== inputField2) {
+            optionsContainer2.style.display = 'none';
+        }
+    });
+
+    optionsContainer2.addEventListener('click', function(e) {
+        if (e.target.classList.contains('option')) {
+            inputField2.value = e.target.textContent;
+            optionsContainer2.style.display = 'none';
+        }
+    });
+
+    inputField3.addEventListener('click', function() {
+        optionsContainer3.style.display = 'block';
+    });
+
+    document.addEventListener('click', function(e) {
+        if (!optionsContainer3.contains(e.target) && e.target !== inputField3) {
+            optionsContainer3.style.display = 'none';
+        }
+    });
+
+    optionsContainer3.addEventListener('click', function(e) {
+        if (e.target.classList.contains('option')) {
+            inputField3.value = e.target.textContent;
+            optionsContainer3.style.display = 'none';
         }
     });
 });
