@@ -27,3 +27,25 @@ document.addEventListener("DOMContentLoaded", function(){
 
 });
 
+// chatgpt method
+document.addEventListener("DOMContentLoaded", function() {
+    const inputField = document.getElementById('inputField');
+    const optionsContainer = document.getElementById('optionsContainer');
+
+    inputField.addEventListener('click', function() {
+        optionsContainer.style.display = 'block';
+    });
+
+    document.addEventListener('click', function(e) {
+        if (!optionsContainer.contains(e.target) && e.target !== inputField) {
+            optionsContainer.style.display = 'none';
+        }
+    });
+
+    optionsContainer.addEventListener('click', function(e) {
+        if (e.target.classList.contains('option')) {
+            inputField.value = e.target.textContent;
+            optionsContainer.style.display = 'none';
+        }
+    });
+});

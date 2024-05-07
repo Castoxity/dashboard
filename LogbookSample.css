@@ -128,3 +128,36 @@ height:500px;
 #ObservationInput {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
+
+
+/* testing the chatgpt way */
+.expandable-input {
+    position: relative;
+    width: 200px; /* Adjust width as needed */
+}
+
+#inputField {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.options-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.option {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.option:hover {
+    background-color: #e5e5e5;
+}
