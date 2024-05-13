@@ -182,19 +182,21 @@ padding-left:13%;
     opacity: 0.2;
 }
 
+.ObservationInput{
+    padding-bottom:40px;
+}
+
 #ObservationInput {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     max-width:65%;
-    width:60%;
-    height:70vh;
+    min-width:60%;
+    min-height:80vh;
     max-height:85vh;
     border-radius:5px;
     border:none;
     font-size:16px;
 }
 
-
-/* testing the chatgpt way */
 .expandable-input {
     position: relative;
     width: 200px;
@@ -215,6 +217,7 @@ padding-left:13%;
     background-color: #f9f9f9;
     border: 1px solid #ccc;
     border-top: none;
+    z-index:20;
 }
 
 .option {
@@ -228,6 +231,109 @@ padding-left:13%;
 
 
 #T-1{
-    height:20px;
+    height:20px;  
+}
+
+@media (max-width:766px){
+    html,
+    body{
+     font-family: 'Poppins';
+     width:100%;
+     margin:0;
+     padding:0;
+
+    }
+
+    .FirstInputs{
+        max-width:100%;
+        display:flex;
+        flex-wrap: wrap;
+    }
     
+    .bruh-2{
+        margin-left:-48px;
+        margin-top:-8%;
+    }
+
+    .bruh-3{
+        position:relative;
+        left:16%;
+    }
+
+    .bruh-4{
+        margin-left:17%;
+        margin-top:-7%;
+        /* margin-right:-80%; */
+        position:relative;
+        left:0px;
+    }
+
+    .SecondLeft{
+        display:none;
+    }
+
+    .SecondRight{
+        position:relative;
+        left:8%;
+    }
+
+    #Heading-2{
+        font-size:17px;
+        font-weight:500;
+    }
+
+    #Text{
+       min-width:280px;
+       max-height:20px;
+       font-size:10px;
+    }
+    
+    .Uploaded-Images {
+        display: flex;
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .image-container {
+        width: 100%;
+        padding-left:10px;
+        padding-right:10px;
+        margin-bottom: 20px;
+    }
+    
+    .image-container img {
+        object-fit: cover;
+        width: 100%; 
+        height: 200px;
+        border-radius:5px;
+    }
+    
+    #Hr1,
+    #Hr2,
+    #Hr3,
+    #Hr4 {
+        position: relative;
+        top: 10px;
+        width: 90%;
+        opacity: 0.2;
+    }
+    
+    .Fourth{
+        padding-top:0;
+    }
+
+    #ObservationInput {
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        max-width:85%;
+        min-width:80%;
+        min-height:80vh;
+        max-height:85vh;
+        border-radius:5px;
+        border:none;
+        font-size:16px;
+    }
 }
