@@ -30,6 +30,11 @@
 //     document.getElementById(check).style.display = 'none';
 //     document.getElementById('RightContent').style.display = 'block';
 // });
+
+
+
+
+
 var swap;
 swap = document.getElementById('RightContent').innerHTML;
 
@@ -56,3 +61,4 @@ document.getElementById('Dashboard').addEventListener('click', function() {
     change.style.backgroundColor ="#ff0000"
     change.style.color  = "#ffffff"
 });
+
