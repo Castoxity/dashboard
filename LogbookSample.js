@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function(){
     const imgBtn = document.querySelector(".InputImg");
     const imgInput = document.getElementById("InputImg");
-    const uploadedImagesContainer = document.querySelector(".Uploaded-Images"); // Get the container for uploaded images
+    const uploadedImagesContainer = document.querySelector(".Uploaded-Images"); 
+    let imageCount = 0; 
 
     imgBtn.addEventListener("click", function(){
         imgInput.click();
@@ -12,10 +13,10 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 
     function HandleImageUpload(file){
-        if(file){
+        if(file && imageCount < 4){ 
             const READER = new FileReader();
             READER.onload = function(e){
-                const imgDiv = document.createElement("div"); // Create a div to hold the image and text box
+                const imgDiv = document.createElement("div"); 
                 imgDiv.classList.add("image-container");
 
                 const img = document.createElement("img");
@@ -23,14 +24,19 @@ document.addEventListener("DOMContentLoaded", function(){
                 img.alt = "Uploaded Image";
                 img.classList.add("Uploaded-Image");
 
-                const textBox = document.createElement("input"); // Create the text box
+                const textBox = document.createElement("input"); 
                 textBox.type = "text";
                 textBox.placeholder = "Enter description";
 
-                imgDiv.appendChild(img); // Append image and text box to the container div
+                imgDiv.appendChild(img); 
                 imgDiv.appendChild(textBox);
 
-                uploadedImagesContainer.appendChild(imgDiv); // Append the container div to the Uploaded-Images container
+                if(imageCount === 4){ 
+                    uploadedImagesContainer.replaceChild(imgDiv, uploadedImagesContainer.firstChild); 
+                } else {
+                    uploadedImagesContainer.appendChild(imgDiv); 
+                    imageCount++; 
+                }
             };
             READER.readAsDataURL(file);
         }
