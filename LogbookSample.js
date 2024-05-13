@@ -31,14 +31,12 @@ document.addEventListener("DOMContentLoaded", function(){
                 imgDiv.appendChild(img); 
                 imgDiv.appendChild(textBox);
 
-                if(imageCount === 4){ 
-                    uploadedImagesContainer.replaceChild(imgDiv, uploadedImagesContainer.firstChild); 
-                } else {
-                    uploadedImagesContainer.appendChild(imgDiv); 
-                    imageCount++; 
-                }
+                uploadedImagesContainer.appendChild(imgDiv); 
+                imageCount++; 
             };
             READER.readAsDataURL(file);
+        } else {
+            alert("only 4 images bruv");
         }
     }
 });
