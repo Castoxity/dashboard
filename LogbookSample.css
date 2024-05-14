@@ -35,8 +35,7 @@ body {
 }
 
 .FirstInputs {
-    position:relative;
-    left:18%;
+    padding-left:10%;
     padding-top: 100px;
     padding-bottom: 50px;
     display: flex;
@@ -247,18 +246,16 @@ padding-left:13%;
     }
     
     .bruh-2{
-        position:relative;
-        left:8%;
         margin-top:-8%;
     }
 
     .bruh-3{
         position:relative;
-        left:16%;
+        left:5%;
     }
 
     .bruh-4{
-        margin-left:17%;
+        margin-left:5%;
         margin-top:-7%;
         /* margin-right:-80%; */
         position:relative;
@@ -348,25 +345,26 @@ padding-left:13%;
     }
 
     .FirstInputs{
+        margin-left:-5%;
         font-size:18px;
         font-weight:500;
         max-width:100%;
         display:flex;
+        gap:10%;
        
     }
 
     .bruh-2{
-        position:relative;
-        left:16%;
+
     }
 
     .bruh-3{
         position:relative;
-        left:53%;
+        left:0%;
     }
 
     .bruh-4{
-        margin-left:44%;
+        margin-left:0%;
         margin-top:0;
         /* margin-right:-80%; */
         position:relative;
