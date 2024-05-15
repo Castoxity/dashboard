@@ -1,4 +1,4 @@
-function loadPage(pageUrl) {
+document.addEventListener('DOMContentLoaded', function loadPage(pageUrl) {
     fetch(pageUrl)
     .then(response => {
         if (!response.ok) {
@@ -13,4 +13,4 @@ function loadPage(pageUrl) {
     .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
     });
-}
+})

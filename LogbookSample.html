@@ -8,12 +8,12 @@
     <script src="https://kit.fontawesome.com/d98b2bf19e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="Parent">
+    <div class="parentlog">
         <div class="First">
             <div class="FirstTop">
                 <span id="FirstTop">Weekly Activity Log Book </span>
                 <br>
-                <span id="Subtitle-1"><u>Sample for Food Production and Patisserie</u></span>
+                <span id="SubtitleLog-1"><u>Sample for Food Production and Patisserie</u></span>
             </div>
             <hr id="Hr1">
             <div class="FirstInputs">
@@ -73,6 +73,9 @@
                 <div class="SecondInputs">
                       <!-- form and label here for the inputs, probably -->
                       <span id="Heading-2"><u>TASKS CARRIED OUT (To be filled by trainee/Handwritten):</u></span>
+                      <div class="TextMore">
+                        <button id="AddText">Generate Textarea</button>
+                      </div>
                       <div class="Tasks">
                      <!-- making a div for each point cuz li doesnt allign with the text box -->
                         <div class="TaskInput">
@@ -99,22 +102,7 @@
                                 <textarea spellcheck="false" id="Text"></textarea>
                             </div>
                         </div>
-                        <div class="TaskInput">
-                            <div class="Dot">
-                                <i class="fa-solid fa-stop"></i>
-                            </div>
-                            <div class="Text">
-                                <textarea spellcheck="false" id="Text"></textarea>
-                            </div>
-                        </div>
-                        <div class="TaskInput">
-                            <div class="Dot">
-                                <i class="fa-solid fa-stop"></i>
-                            </div>
-                            <div class="Text">
-                                <textarea spellcheck="false" id="Text"></textarea>
-                            </div>
-                        </div>
+                        <div id="textareaContainer"></div>
                      </div>
                 </div>
             </div>

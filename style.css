@@ -2,12 +2,13 @@
     padding:0;
     margin:0;
 }
-body{
+body,html
+{
     color:white;
 }
 .Parent{
     display:flex;
-    flex-direction: row;
+
 }
 
 #ImageLogo{
@@ -15,17 +16,18 @@ body{
 }
 
 .Left{
-    /* the blue used is 2B5972 */
+
     background-color: #2B5972; 
     width:30%;
-    height:100vh;
+
 }
+
 
 
 .Right{
     background-color:#F7F8FB;
     width:100%;
-    height:100vh;
+
 }
 
 .LeftTop{

@@ -102,3 +102,49 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     const AddText = document.getElementById('AddText');
+//     const textareaContainer = document.getElementById('textareaContainer');
+//     let textareaCount = 0; // Track the number of textareas added
+
+//     AddText.addEventListener('click', function() {
+//         const textarea = document.createElement('textarea');
+//         const icon = document.createElement('i');
+//         icon.classList.add('fa', 'fa-stop', 'fa-icon'); 
+//         const container = document.createElement('div');
+//         container.classList.add('icon-textarea-container');
+//         container.appendChild(icon);
+//         container.appendChild(textarea);
+//         textareaContainer.appendChild(container);
+//         textareaCount++;
+//         if (textareaCount > 1) {
+//             container.style.marginTop = '10px'; 
+//         }
+//     });
+// });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const AddText = document.getElementById('AddText');
+    const textareaContainer = document.getElementById('textareaContainer');
+    let textareaCount = 0;
+
+    AddText.addEventListener('click', function() {
+        if (textareaCount < 2) {
+            const textarea = document.createElement('textarea');
+            const icon = document.createElement('i');
+            icon.classList.add('fa', 'fa-stop', 'fa-icon'); 
+            const container = document.createElement('div');
+            container.classList.add('icon-textarea-container');
+            container.appendChild(icon);
+            container.appendChild(textarea);
+            textareaContainer.appendChild(container);
+            textareaCount++;
+            if (textareaCount > 1) {
+                container.style.marginTop = '5px'; 
+            }
+        } else {
+            alert('ur human rights only allows u to add 2 more text areas bruv');
+        }
+    });
+});

@@ -49,6 +49,8 @@ function loadPage(pageUrl) {
     .then(data => {
 
         document.getElementById('RightContent').innerHTML = data;
+        // document.getElementById('testingcontent').style.display = "none";
+        // document.getElementById('logbookContent').style.display = "block";
     })
     .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
