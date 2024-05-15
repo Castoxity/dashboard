@@ -158,6 +158,11 @@ padding-left:13%;
     width:60%;
 }
 
+/* .Dot{
+    display: flex;
+    align-items: center;
+} */
+
 #Heading-2 {
     padding-left: 30px;
 }
@@ -170,10 +175,10 @@ padding-left:13%;
 }
 
 #Text{
-    height:20px;
-    max-height:40px;
-    min-width:30vw;
-    max-width:40vw;
+    min-height:25px;
+    max-height:25px;
+    min-width:35vw;
+    max-width:35vw;
     border:none;
 }
 
@@ -192,12 +197,29 @@ padding-left:13%;
 
 #textareaContainer  textarea{
     margin-left:10px;
-    height:20px;
-    max-height:40px;
-    min-width:30vw;
-    max-width:40vw;
+    min-height:25px;
+    max-height:25px;
+    min-width:35vw;
+    max-width:35vw;
     border:none;
     border-radius:4px;
+}
+
+.TextMore{
+    padding-left:20px;
+    padding-top:10px;
+    
+}
+
+#AddText{
+    background:transparent;
+    border:none;
+    outline:none;
+    box-shadow: 2px 2px 10px rgba(230, 226, 226, 0.3);
+    cursor:pointer;
+    border-radius:100px;
+    color:#DADDE1;
+
 }
 
 .Third{
@@ -381,6 +403,11 @@ padding-left:13%;
        max-height:20px;
        font-size:10px;
     }
+
+    #textareaContainer textarea{
+        min-width:280px;
+        max-height:20px;
+    }
     
     .Uploaded-Images {
         display: flex;
@@ -404,6 +431,7 @@ padding-left:13%;
         width: 100%; 
         height: 200px;
         border-radius:5px;
+        filter:grayscale(0%);
     }
 
 
@@ -482,7 +510,8 @@ padding-left:13%;
         font-weight:500;
     }
 
-    #Text{
+    #Text,
+    #textareaContainer textarea{
        min-width:450px;
        max-height:100%;
        font-size:15px;
@@ -510,6 +539,8 @@ padding-left:13%;
         width: 100%; 
         height: 400px;
         border-radius:5px;
+        filter:grayscale(0%);
+
     }
 
     #Hr1,
