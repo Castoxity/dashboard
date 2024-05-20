@@ -15,7 +15,8 @@ function loadPage(pageUrl) {
             if (pageUrl === 'LogbookSample.html') {
                 const cssElement = document.createElement('link');
                 cssElement.rel = 'stylesheet';
-                cssElement.href = 'LogbookSample.css';
+
+                cssElement.href = 'LogbookInsideDash.css';
                 document.head.appendChild(cssElement);
 
                 const scriptElement = document.createElement('script');

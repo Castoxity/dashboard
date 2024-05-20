@@ -5,7 +5,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: Poppins;
-    /* background: linear-gradient(to top, #000000, #DADDE1); */
+    background: linear-gradient(to top, #000000, #DADDE1);
     /* background: rgb(2,0,36); */
     /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(240,242,245,1) 100%); */
     /* background-color:#f0f2f5; */
@@ -125,7 +125,7 @@ textarea{
 
 #Todo {
     color:#0072CE;
-    padding-top:20%;
+    padding-top:10px;
     padding-left:13%;
     scale:8;
  

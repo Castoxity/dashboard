@@ -6,20 +6,18 @@
     <title>Logbook sample</title>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-          var link = document.createElement("link");
-          link.rel = "stylesheet";
-
+            var link = document.createElement("link");
+            link.rel = "stylesheet";
     
-          if (window.top === window.self) {
-
-            link.href = "LogbookSample.css";
-          } else {
-            link.href = "LogbookInsideDash.css";
-          }
+            if (window.top === window.self) {
+                link.href = "LogbookSample.css";  
+            } else {
+                link.href = "LogbookInsideDash.css"; 
+            }
     
-          document.head.appendChild(link);
+            document.head.appendChild(link);
         });
-      </script>
+    </script>
     <script src="https://kit.fontawesome.com/d98b2bf19e.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -34,105 +32,100 @@
             <div class="FirstInputs">
                 <div class="InputGaps-1">
                     <div class="bruh-1">
-                    <span id="DatesWorked">Dates Worked: <span id="Input-1"><input type="date" id="date"></span></span></div>
+                        <span id="DatesWorked">Dates Worked: <span id="Input-1"><input type="date" id="date"></span></span>
+                    </div>
                     <div class="bruh-2">
                         <div class="Department">
-                        <span id="Department">Department: </span>
+                            <span id="Department">Department: </span>
                         </div>
                         <div class="dropdown">
                             <select id="DepartmentDropdown">
                                 <option value="" disabled selected></option>
-                            
                             </select>
-                            
                         </div>
-                        
-                    </div> </div>
-                    <div class="InputGaps-2">
-                        <div class="bruh-3">
-                            <div class="Shift">
-                             <span id="Shift">Shift:</span>
-                            </div>   
-                            <div class="dropdown">
-                                <select id="ShiftDropdown">
-                                    <option value="" disabled selected></option>
-                                
-                                </select>
-                            </div>
-                        </div>                    
-                     <div class="bruh-4">
+                    </div> 
+                </div>
+                <div class="InputGaps-2">
+                    <div class="bruh-3">
+                        <div class="Shift">
+                            <span id="Shift">Shift:</span>
+                        </div>   
+                        <div class="dropdown">
+                            <select id="ShiftDropdown">
+                                <option value="" disabled selected></option>
+                            </select>
+                        </div>
+                    </div>                    
+                    <div class="bruh-4">
                         <div class="Section">
                             <span id="Section">Section: </span>
                         </div>
                         <div class="dropdown">
                             <select id="SectionDropdown">
                                 <option value="" disabled selected></option>
-                            
                             </select>
                         </div>
-                     </div>
-                     </div>
-                   
-        </div><hr id="Hr2">
-        <div class="Second">
-            <div class="SecondLeft">
-                <i class="fa-solid fa-clipboard-list" id="Todo"></i>
-            </div>
-            <div class="SecondRight">
-                <div class="SecondInputs">
-                      <span id="Heading-2"><u>TASKS CARRIED OUT (To be filled by trainee/Handwritten):</u></span>
-
-                      <div class="Tasks">
-                        <div class="TaskInput">
-                            <div class="Dot">
-                                <i class="fa-solid fa-stop"></i>
-                            </div>
-                            <div class="Text">
-                                <textarea spellcheck="false" id="Text"></textarea>
-                            </div>
-                        </div>
-                        <div class="TaskInput">
-                            <div class="Dot">
-                                <i class="fa-solid fa-stop"></i>
-                            </div>
-                            <div class="Text">
-                                <textarea spellcheck="false" id="Text"></textarea>
-                            </div>
-                        </div>
-                        <div class="TaskInput">
-                            <div class="Dot">
-                                <i class="fa-solid fa-stop"></i>
-                            </div>
-                            <div class="Text">
-                                <textarea spellcheck="false" id="Text"></textarea>
-                            </div>
-                        </div>
-                        <div id="textareaContainer"></div>
-                        <div class="TextMore">
-                            <button id="AddText"><i class="fa-solid fa-plus"></i></button>
-                          </div>
-                     </div>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="Third">
-            <h3 id="Share"><u>Pictures to share</u></h3>
-            <div class="BtnImg">
-                <input type="file" id="InputImg" style="display:none;">
-                <button type="button" class="InputImg">Upload Images As You Desire <i class="fa-solid fa-arrow-pointer"></i></button>
+            <hr id="Hr2">
+            <div class="Second">
+                <div class="SecondLeft">
+                    <i class="fa-solid fa-clipboard-list" id="Todo"></i>
+                </div>
+                <div class="SecondRight">
+                    <div class="SecondInputs">
+                        <span id="Heading-2"><u>TASKS CARRIED OUT (To be filled by trainee/Handwritten):</u></span>
+                        <div class="Tasks">
+                            <div class="TaskInput">
+                                <div class="Dot">
+                                    <i class="fa-solid fa-stop"></i>
+                                </div>
+                                <div class="Text">
+                                    <textarea spellcheck="false" id="Text"></textarea>
+                                </div>
+                            </div>
+                            <div class="TaskInput">
+                                <div class="Dot">
+                                    <i class="fa-solid fa-stop"></i>
+                                </div>
+                                <div class="Text">
+                                    <textarea spellcheck="false" id="Text"></textarea>
+                                </div>
+                            </div>
+                            <div class="TaskInput">
+                                <div class="Dot">
+                                    <i class="fa-solid fa-stop"></i>
+                                </div>
+                                <div class="Text">
+                                    <textarea spellcheck="false" id="Text"></textarea>
+                                </div>
+                            </div>
+                            <div id="textareaContainer"></div>
+                            <div class="TextMore">
+                                <button id="AddText"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="Uploaded-Images">
-               
+            <div class="Third">
+                <h3 id="Share"><u>Pictures to share</u></h3>
+                <div class="BtnImg">
+                    <input type="file" id="InputImg" style="display:none;">
+                    <button type="button" class="InputImg">Upload Images As You Desire <i class="fa-solid fa-arrow-pointer"></i></button>
+                </div>
+                <div class="Uploaded-Images"></div>
             </div>
-        </div>
-    <hr id="Hr4">
-        <div class="Fourth">
-            <div class="InnerFourth">
-            <h3 id="ObservationHeading">Observation</h3>
-            <div class="ObservationInput">
-                <textarea placeholder="Your observation description here" spellcheck="false" id="ObservationInput"></textarea>
-            </div></div>
+            <hr id="Hr4">
+            <div class="Fourth">
+                <div class="InnerFourth">
+                    <h3 id="ObservationHeading">Observation</h3>
+                    <div class="ObservationInput">
+                        <textarea placeholder="Your observation description here" spellcheck="false" id="ObservationInput"></textarea>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="LogbookSample.js"></script>

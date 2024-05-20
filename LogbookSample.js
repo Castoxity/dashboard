@@ -153,10 +153,10 @@ sections.forEach(bruh3 => {
                 textareaContainer.appendChild(container);
                 textareaCount++;
                 if (textareaCount > 1) {
-                    container.style.marginTop = '5px';
+                    // container.style.marginTop = '-5px';
                 }
             } else {
-                alert('You can only add up to 2 more text areas.');
+                alert('u can only add up to 2 more text areas bruh');
             }
         });
     }
