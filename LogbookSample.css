@@ -5,7 +5,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: Poppins;
-    background: linear-gradient(to top, #000000, #DADDE1);
+    /* background: linear-gradient(to top, #000000, #DADDE1); */
     /* background: rgb(2,0,36); */
     /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(240,242,245,1) 100%); */
     /* background-color:#f0f2f5; */
@@ -125,9 +125,9 @@ textarea{
 
 #Todo {
     color:#0072CE;
-    padding-top:20px;
-padding-left:13%;
- scale:8;
+    padding-top:20%;
+    padding-left:13%;
+    scale:8;
  
 }
 
@@ -320,7 +320,31 @@ padding-left:13%;
     box-sizing: border-box;
     
 }
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
 
+.dropdown select {
+    width: 100%;
+    padding: 5px;
+    padding-right:90px;
+    border: 1px solid black;
+    border-radius: 3px;
+    outline: none;
+}
+
+#date{
+    padding-right:70px;
+}
+
+.dropdown-icon:before {
+    content: '\f078';
+    font-weight: 900;
+    font-size: 12px;
+}
+
+/* 
 .options-container {
     display: none;
     position: absolute;
@@ -344,7 +368,7 @@ padding-left:13%;
 
 .option:hover {
     background-color: #e5e5e5;
-}
+} */
 
 
 #T-1{

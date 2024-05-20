@@ -41,63 +41,101 @@ const LogbookSample = (function() {
             }
         }
 
-        const inputField1 = document.getElementById('inputField1');
-        const optionsContainer1 = document.getElementById('optionsContainer1');
-        const inputField2 = document.getElementById('inputField2');
-        const optionsContainer2 = document.getElementById('optionsContainer2');
-        const inputField3 = document.getElementById('inputField3');
-        const optionsContainer3 = document.getElementById('optionsContainer3');
+        // const inputField1 = document.getElementById('inputField1');
+        // const optionsContainer1 = document.getElementById('optionsContainer1');
+        // const inputField2 = document.getElementById('inputField2');
+        // const optionsContainer2 = document.getElementById('optionsContainer2');
+        // const inputField3 = document.getElementById('inputField3');
+        // const optionsContainer3 = document.getElementById('optionsContainer3');
 
-        inputField1.addEventListener('click', function() {
-            optionsContainer1.style.display = 'block';
-        });
+        // inputField1.addEventListener('click', function() {
+        //     optionsContainer1.style.display = 'block';
+        // });
 
-        document.addEventListener('click', function(e) {
-            if (!optionsContainer1.contains(e.target) && e.target !== inputField1) {
-                optionsContainer1.style.display = 'none';
-            }
-        });
+        // document.addEventListener('click', function(e) {
+        //     if (!optionsContainer1.contains(e.target) && e.target !== inputField1) {
+        //         optionsContainer1.style.display = 'none';
+        //     }
+        // });
 
-        optionsContainer1.addEventListener('click', function(e) {
-            if (e.target.classList.contains('option')) {
-                inputField1.value = e.target.textContent;
-                optionsContainer1.style.display = 'none';
-            }
-        });
+        // optionsContainer1.addEventListener('click', function(e) {
+        //     if (e.target.classList.contains('option')) {
+        //         inputField1.value = e.target.textContent;
+        //         optionsContainer1.style.display = 'none';
+        //     }
+        // });
 
-        inputField2.addEventListener('click', function() {
-            optionsContainer2.style.display = 'block';
-        });
+        // inputField2.addEventListener('click', function() {
+        //     optionsContainer2.style.display = 'block';
+        // });
 
-        document.addEventListener('click', function(e) {
-            if (!optionsContainer2.contains(e.target) && e.target !== inputField2) {
-                optionsContainer2.style.display = 'none';
-            }
-        });
+        // document.addEventListener('click', function(e) {
+        //     if (!optionsContainer2.contains(e.target) && e.target !== inputField2) {
+        //         optionsContainer2.style.display = 'none';
+        //     }
+        // });
 
-        optionsContainer2.addEventListener('click', function(e) {
-            if (e.target.classList.contains('option')) {
-                inputField2.value = e.target.textContent;
-                optionsContainer2.style.display = 'none';
-            }
-        });
+        // optionsContainer2.addEventListener('click', function(e) {
+        //     if (e.target.classList.contains('option')) {
+        //         inputField2.value = e.target.textContent;
+        //         optionsContainer2.style.display = 'none';
+        //     }
+        // });
 
-        inputField3.addEventListener('click', function() {
-            optionsContainer3.style.display = 'block';
-        });
+        // inputField3.addEventListener('click', function() {
+        //     optionsContainer3.style.display = 'block';
+        // });
 
-        document.addEventListener('click', function(e) {
-            if (!optionsContainer3.contains(e.target) && e.target !== inputField3) {
-                optionsContainer3.style.display = 'none';
-            }
-        });
+        // document.addEventListener('click', function(e) {
+        //     if (!optionsContainer3.contains(e.target) && e.target !== inputField3) {
+        //         optionsContainer3.style.display = 'none';
+        //     }
+        // });
 
-        optionsContainer3.addEventListener('click', function(e) {
-            if (e.target.classList.contains('option')) {
-                inputField3.value = e.target.textContent;
-                optionsContainer3.style.display = 'none';
-            }
-        });
+        // optionsContainer3.addEventListener('click', function(e) {
+        //     if (e.target.classList.contains('option')) {
+        //         inputField3.value = e.target.textContent;
+        //         optionsContainer3.style.display = 'none';
+        //     }
+        // });
+
+
+const DepartmentDropdown = document.getElementById('DepartmentDropdown');
+const ShiftDropdown = document.getElementById('ShiftDropdown');
+const SectionDropdown = document.getElementById('SectionDropdown');
+
+
+DepartmentDropdown.innerHTML = '';
+ShiftDropdown.innerHTML = '';
+SectionDropdown.innerHTML = '';
+
+
+const departments = ['Option-1', 'Option-2', 'Option-3']; 
+const shifts = ['Option-1', 'Option-2', 'Option-3']; 
+const sections = ['Option-1', 'Option-2', 'Option-3']; 
+
+
+departments.forEach(bruh => {
+    const option = document.createElement('option');
+    option.value = bruh;
+    option.textContent = bruh;
+    DepartmentDropdown.appendChild(option);
+});
+
+shifts.forEach(bruh2 => {
+    const option2 = document.createElement('option');
+    option2.value = bruh2;
+    option2.textContent = bruh2;
+    ShiftDropdown.appendChild(option2);
+});
+
+sections.forEach(bruh3 => {
+    const option3 = document.createElement('option');
+    option3.value = bruh3;
+    option3.textContent = bruh3;
+    SectionDropdown.appendChild(option3);
+});
+
 
         const AddText = document.getElementById('AddText');
         const textareaContainer = document.getElementById('textareaContainer');
